@@ -1,0 +1,1640 @@
+{
+    "resourceType": "Bundle",
+    "id": "2184",
+    "meta": {
+        "versionId": "5",
+        "lastUpdated": "2024-10-23T23:04:41.583+00:00",
+        "source": "#mnRhq4ry0YIqeT0B"
+    },
+    "identifier": {
+        "system": "urn:ietf:rfc:4122",
+        "value": "f50a5146-7d08-4f4d-b7a9-eb8a05d513a0"
+    },
+    "type": "document",
+    "timestamp": "2024-10-23T23:04:40.350+00:00",
+    "entry": [
+        {
+            "id": "54c8877a-f0cf-4359-aad0-26d2dacd8ebc",
+            "fullUrl": "urn:uuid:54c8877a-f0cf-4359-aad0-26d2dacd8ebc",
+            "resource": {
+                "resourceType": "Composition",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Resumen Clínico generado para la persona con el uuid ed9a056a-706f-432f-9d32-db9e7b4e59d7.</div>"
+                },
+                "status": "final",
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "60591-5",
+                            "display": "Patient Summary Document"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "urn:uuid:ed9a056a-706f-432f-9d32-db9e7b4e59d7"
+                },
+                "date": "2024-10-23T19:16:57.078+00:00",
+                "author": [
+                    {
+                        "reference": "urn:uuid:3990eb10-f921-43aa-8299-3c2cb7e869b3"
+                    }
+                ],
+                "title": "Patient Summary as of 23/10/2024",
+                "confidentiality": "N",
+                "custodian": {
+                    "reference": "urn:uuid:3990eb10-f921-43aa-8299-3c2cb7e869b3"
+                },
+                "section": [
+                    {
+                        "title": "Vital Signs",
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://loinc.org",
+                                    "code": "8716-3",
+                                    "display": "Vital Signs"
+                                }
+                            ]
+                        },
+                        "text": {
+                            "status": "generated",
+                            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"hapiPropertyTable\"><tbody><tr><td>Talla</td><td>178 cm</td></tr><tr><td>Peso</td><td>75 kg</td></tr><tr><td>Temperatura</td><td>35 °C</td></tr><tr><td>Frecuencia Respiratoria</td><td>30</td></tr><tr><td>Frecuencia Cardiaca</td><td>100</td></tr><tr><td>Presion Arterial</td><td>100/120</td></tr></tbody></table></div>"
+                        },
+                        "entry": [
+                            {
+                                "reference": "urn:uuid:b30d17f4-153f-4b7e-81bb-d351e6fefff3"
+                            },
+                            {
+                                "reference": "urn:uuid:20860737-5e3a-49e2-aa41-cb6c3167e55f"
+                            },
+                            {
+                                "reference": "urn:uuid:f6243672-5ebf-44aa-8dbb-1ea654b752c0"
+                            },
+                            {
+                                "reference": "urn:uuid:3e2bfe97-e1ad-4e68-8e76-13fd2a6fb054"
+                            },
+                            {
+                                "reference": "urn:uuid:21287060-7d92-40f4-a7bc-64c4f0fcfd14"
+                            },
+                            {
+                                "reference": "urn:uuid:d7200e70-d97e-4bcd-957e-5e7e6ae00c33"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "IPS Problems Section",
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://loinc.org",
+                                    "code": "11450-4",
+                                    "display": "Problem list - Reported"
+                                }
+                            ]
+                        },
+                        "text": {
+                            "status": "generated",
+                            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Narrativa de los Problemas Activos...</div>"
+                        },
+                        "entry": [
+                            {
+                                "reference": "urn:uuid:f6c4583a-03ed-4b73-a2c8-5baa4440602b"
+                            },
+                            {
+                                "reference": "urn:uuid:2cac2447-e055-455d-94af-44c56dfd43b4"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "IPS Allergies and Intolerances Section",
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://loinc.org",
+                                    "code": "48765-2",
+                                    "display": "Allergies and adverse reactions Document"
+                                }
+                            ]
+                        },
+                        "text": {
+                            "status": "generated",
+                            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Narrativa de las Alergias e Intolerancias...</div>"
+                        },
+                        "entry": [
+                            {
+                                "reference": "urn:uuid:29f62ca2-2fa7-425a-aaf8-1c278a58cd0a"
+                            },
+                            {
+                                "reference": "urn:uuid:08afc82e-25a2-4a1a-bf7e-879584d82177"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Medication Summary section",
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://loinc.org",
+                                    "code": "10160-0",
+                                    "display": "History of Medication use Narrative"
+                                }
+                            ]
+                        },
+                        "text": {
+                            "status": "generated",
+                            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Narrativa de la Medicacion...</div>"
+                        },
+                        "entry": [
+                            {
+                                "reference": "urn:uuid:70956797-6376-4703-b41c-e7d23f82f551"
+                            },
+                            {
+                                "reference": "urn:uuid:4ca21d7c-8015-4e3e-b660-c32fc912b087"
+                            },
+                            {
+                                "reference": "urn:uuid:ab945a36-4c74-4c8e-92e2-2f1ec8050a58"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Immunization",
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://loinc.org",
+                                    "code": "11369-6",
+                                    "display": "History of Immunization Narrative"
+                                }
+                            ]
+                        },
+                        "text": {
+                            "status": "generated",
+                            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Historial de Immnunizaciones...</div>"
+                        },
+                        "entry": [
+                            {
+                                "reference": "urn:uuid:582cab6e-3852-401f-b44a-ad336302efb5"
+                            },
+                            {
+                                "reference": "urn:uuid:66b6872c-2733-479b-842b-68cde48595b2"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Past Medical History",
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://loinc.org",
+                                    "code": "11348-0",
+                                    "display": "History of Past illness Narrative"
+                                }
+                            ]
+                        },
+                        "text": {
+                            "status": "generated",
+                            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Antecedentes del paciente...</div>"
+                        },
+                        "entry": [
+                            {
+                                "reference": "urn:uuid:3c450651-9161-4fc0-b5b9-79b938d5231b"
+                            },
+                            {
+                                "reference": "urn:uuid:b92cca07-fe52-4cbb-98aa-2240fa04c262"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Procedures",
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://loinc.org",
+                                    "code": "29554-3",
+                                    "display": "Procedure Narrative"
+                                }
+                            ]
+                        },
+                        "text": {
+                            "status": "generated",
+                            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Historial de Procedimientos...</div>"
+                        },
+                        "entry": [
+                            {
+                                "reference": "urn:uuid:cb7ff5b4-87dd-4e49-bc72-3794b3b215d2"
+                            },
+                            {
+                                "reference": "urn:uuid:bc995676-c9c0-4241-998e-61cdadbf1f87"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:3990eb10-f921-43aa-8299-3c2cb7e869b3",
+            "resource": {
+                "resourceType": "Organization",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Institución responsable</div>"
+                },
+                "name": "Hospital de Diagnóstico",
+                "address": [
+                    {
+                        "line": [
+                            "Paseo General Escalón 3700,  San Salvador"
+                        ],
+                        "city": "San Salvador",
+                        "country": "SV"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:ed9a056a-706f-432f-9d32-db9e7b4e59d7",
+            "resource": {
+                "resourceType": "Patient",
+                "meta": {
+                    "versionId": "1",
+                    "lastUpdated": "2024-10-23T19:16:58.177+00:00",
+                    "source": "#e663a78546e80b8b"
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">This patient resource contains information about a patient</div>"
+                },
+                "identifier": [
+                    {
+                        "use": "official",
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                                    "code": "PPN"
+                                }
+                            ]
+                        },
+                        "system": "urn:oid.2.16.152",
+                        "value": "B23456789"
+                    },
+                    {
+                        "use": "official",
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                                    "code": "TAX"
+                                }
+                            ]
+                        },
+                        "system": "urn:oid.2.16.152",
+                        "value": "P/B23456789"
+                    }
+                ],
+                "active": true,
+                "name": [
+                    {
+                        "use": "official",
+                        "text": "ANICETO",
+                        "family": "MOLINA",
+                        "given": [
+                            "ANICETO",
+                            "MOLINA"
+                        ]
+                    }
+                ],
+                "gender": "male",
+                "birthDate": "1939-01-27",
+                "address": [
+                    {
+                        "line": [
+                            "SAN SALVADOR"
+                        ],
+                        "country": "SV"
+                    }
+                ],
+                "contact": [
+                    {
+                        "relationship": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                                        "code": "N",
+                                        "display": "Next-of-Kin"
+                                    }
+                                ]
+                            }
+                        ],
+                        "name": {
+                            "use": "official",
+                            "family": "ANICETA",
+                            "given": [
+                                "MOLINA",
+                                "ANICETA"
+                            ]
+                        },
+                        "gender": "female"
+                    }
+                ],
+                "communication": [
+                    {
+                        "language": {
+                            "coding": [
+                                {
+                                    "system": "urn:ietf:bcp:47",
+                                    "code": "es",
+                                    "display": "Spanish"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:83925bc5-c347-4eef-8b5c-cb7f2d056aef",
+            "resource": {
+                "resourceType": "PractitionerRole",
+                "meta": {
+                    "versionId": "1",
+                    "lastUpdated": "2024-10-23T19:16:58.181+00:00",
+                    "source": "#1372def5714c4b2e"
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Información acerca del empleado</div>"
+                },
+                "active": true,
+                "practitioner": {
+                    "reference": "urn:uuid:98c3ff50-9e17-40b2-8df7-7c4d893d238a"
+                },
+                "organization": {
+                    "reference": "urn:uuid:3990eb10-f921-43aa-8299-3c2cb7e869b3"
+                },
+                "code": [
+                    {
+                        "coding": [
+                            {
+                                "system": "urn:oid:2.16.840.1.113883.2.9.6.2.7",
+                                "code": "221",
+                                "display": "Medical doctors"
+                            }
+                        ],
+                        "text": "Doctor"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:98c3ff50-9e17-40b2-8df7-7c4d893d238a",
+            "resource": {
+                "resourceType": "Practitioner",
+                "meta": {
+                    "versionId": "1",
+                    "lastUpdated": "2024-10-23T19:16:58.181+00:00",
+                    "source": "#ba1f0a9fe6f4a58d"
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Información acerca del empleado</div>"
+                },
+                "active": true,
+                "name": [
+                    {
+                        "use": "official",
+                        "family": "LOPEZ",
+                        "given": [
+                            "EDGAR"
+                        ],
+                        "suffix": [
+                            "MD"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:b30d17f4-153f-4b7e-81bb-d351e6fefff3",
+            "resource": {
+                "resourceType": "Observation",
+                "meta": {
+                    "versionId": "1",
+                    "lastUpdated": "2024-10-23T19:16:58.182+00:00",
+                    "source": "#464808b7b4973b0f"
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">This patient resource contains information about a patient identified by ID ed9a056a-706f-432f-9d32-db9e7b4e59d7.</div>"
+                },
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "vital-signs",
+                                "display": "Vital Signs"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "8302-2",
+                            "display": "Body height"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "urn:uuid:ed9a056a-706f-432f-9d32-db9e7b4e59d7"
+                },
+                "effectiveDateTime": "2024-10-23",
+                "performer": [
+                    {
+                        "reference": "urn:uuid:83925bc5-c347-4eef-8b5c-cb7f2d056aef"
+                    }
+                ],
+                "valueQuantity": {
+                    "value": 178,
+                    "unit": "cm",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "cm"
+                }
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:20860737-5e3a-49e2-aa41-cb6c3167e55f",
+            "resource": {
+                "resourceType": "Observation",
+                "meta": {
+                    "versionId": "1",
+                    "lastUpdated": "2024-10-23T19:16:58.182+00:00",
+                    "source": "#464808b7b4973b0f"
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">This patient resource contains information about a patient identified by ID ed9a056a-706f-432f-9d32-db9e7b4e59d7.</div>"
+                },
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "vital-signs",
+                                "display": "Vital Signs"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "29463-7",
+                            "display": "Body weight"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "urn:uuid:ed9a056a-706f-432f-9d32-db9e7b4e59d7"
+                },
+                "effectiveDateTime": "2024-10-23",
+                "performer": [
+                    {
+                        "reference": "urn:uuid:83925bc5-c347-4eef-8b5c-cb7f2d056aef"
+                    }
+                ],
+                "valueQuantity": {
+                    "value": 75,
+                    "unit": "kg",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "kg"
+                }
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:f6243672-5ebf-44aa-8dbb-1ea654b752c0",
+            "resource": {
+                "resourceType": "Observation",
+                "meta": {
+                    "versionId": "1",
+                    "lastUpdated": "2024-10-23T19:16:58.182+00:00",
+                    "source": "#464808b7b4973b0f"
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">This patient resource contains information about a patient identified by ID ed9a056a-706f-432f-9d32-db9e7b4e59d7.</div>"
+                },
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "vital-signs",
+                                "display": "Vital Signs"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "8310-5",
+                            "display": "Body temperature"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "urn:uuid:ed9a056a-706f-432f-9d32-db9e7b4e59d7"
+                },
+                "effectiveDateTime": "2024-10-23",
+                "performer": [
+                    {
+                        "reference": "urn:uuid:83925bc5-c347-4eef-8b5c-cb7f2d056aef"
+                    }
+                ],
+                "valueQuantity": {
+                    "value": 35,
+                    "unit": "Cel",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "Cel"
+                }
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:3e2bfe97-e1ad-4e68-8e76-13fd2a6fb054",
+            "resource": {
+                "resourceType": "Observation",
+                "meta": {
+                    "versionId": "1",
+                    "lastUpdated": "2024-10-23T19:16:58.182+00:00",
+                    "source": "#464808b7b4973b0f"
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">This patient resource contains information about a patient identified by ID ed9a056a-706f-432f-9d32-db9e7b4e59d7.</div>"
+                },
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "vital-signs",
+                                "display": "Vital Signs"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "9279-1",
+                            "display": "Respiratory rate"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "urn:uuid:ed9a056a-706f-432f-9d32-db9e7b4e59d7"
+                },
+                "effectiveDateTime": "2024-10-23",
+                "performer": [
+                    {
+                        "reference": "urn:uuid:83925bc5-c347-4eef-8b5c-cb7f2d056aef"
+                    }
+                ],
+                "valueQuantity": {
+                    "value": 30,
+                    "unit": "/min",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "/min"
+                }
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:21287060-7d92-40f4-a7bc-64c4f0fcfd14",
+            "resource": {
+                "resourceType": "Observation",
+                "meta": {
+                    "versionId": "1",
+                    "lastUpdated": "2024-10-23T19:16:58.182+00:00",
+                    "source": "#464808b7b4973b0f"
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">This patient resource contains information about a patient identified by ID ed9a056a-706f-432f-9d32-db9e7b4e59d7.</div>"
+                },
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "vital-signs",
+                                "display": "Vital Signs"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "8867-4",
+                            "display": "Heart rate"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "urn:uuid:ed9a056a-706f-432f-9d32-db9e7b4e59d7"
+                },
+                "effectiveDateTime": "2024-10-23",
+                "performer": [
+                    {
+                        "reference": "urn:uuid:83925bc5-c347-4eef-8b5c-cb7f2d056aef"
+                    }
+                ],
+                "valueQuantity": {
+                    "value": 100,
+                    "unit": "/min",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "/min"
+                }
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:d7200e70-d97e-4bcd-957e-5e7e6ae00c33",
+            "resource": {
+                "resourceType": "Observation",
+                "meta": {
+                    "versionId": "1",
+                    "lastUpdated": "2024-10-23T19:16:58.182+00:00",
+                    "source": "#464808b7b4973b0f"
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">This patient resource contains information about a patient identified by ID ed9a056a-706f-432f-9d32-db9e7b4e59d7.</div>"
+                },
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "vital-signs",
+                                "display": "Vital Signs"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "85354-9",
+                            "display": "Blood pressure panel with all children optional"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "urn:uuid:ed9a056a-706f-432f-9d32-db9e7b4e59d7"
+                },
+                "effectiveDateTime": "2024-10-23",
+                "performer": [
+                    {
+                        "reference": "urn:uuid:83925bc5-c347-4eef-8b5c-cb7f2d056aef"
+                    }
+                ],
+                "component": [
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://loinc.org",
+                                    "code": "8480-6",
+                                    "display": "Systolic blood pressure"
+                                }
+                            ]
+                        },
+                        "valueQuantity": {
+                            "value": 100,
+                            "unit": "mm[Hg]",
+                            "system": "http://unitsofmeasure.org",
+                            "code": "mm[Hg]"
+                        }
+                    },
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://loinc.org",
+                                    "code": "8462-4",
+                                    "display": "Diastolic blood pressure"
+                                }
+                            ]
+                        },
+                        "valueQuantity": {
+                            "value": 120,
+                            "unit": "mm[Hg]",
+                            "system": "http://unitsofmeasure.org",
+                            "code": "mm[Hg]"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:f6c4583a-03ed-4b73-a2c8-5baa4440602b",
+            "resource": {
+                "resourceType": "Condition",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">This patient resource contains information about a patient identified by ID ed9a056a-706f-432f-9d32-db9e7b4e59d7.</div>"
+                },
+                "clinicalStatus": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                            "code": "active",
+                            "display": "Active"
+                        }
+                    ],
+                    "text": "active"
+                },
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                                "code": "encounter-diagnosis",
+                                "display": "Encounter Diagnosis"
+                            }
+                        ],
+                        "text": "Encounter Diagnosis"
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "34000006",
+                            "display": "Crohn's disease (disorder)"
+                        },
+                        {
+                            "system": "http://racsel.org/connectathon",
+                            "code": "D11",
+                            "display": "Enfermedad de Crohn"
+                        },
+                        {
+                            "system": "http://hl7.org/fhir/sid/icd-10",
+                            "code": "K50.9",
+                            "display": "Enfermedad de Crohn no especificada"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "urn:uuid:ed9a056a-706f-432f-9d32-db9e7b4e59d7"
+                },
+                "onsetDateTime": "2024-10-23",
+                "recorder": {
+                    "reference": "urn:uuid:98c3ff50-9e17-40b2-8df7-7c4d893d238a"
+                }
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:2cac2447-e055-455d-94af-44c56dfd43b4",
+            "resource": {
+                "resourceType": "Condition",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">This patient resource contains information about a patient identified by ID ed9a056a-706f-432f-9d32-db9e7b4e59d7.</div>"
+                },
+                "clinicalStatus": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                            "code": "active",
+                            "display": "Active"
+                        }
+                    ],
+                    "text": "active"
+                },
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                                "code": "encounter-diagnosis",
+                                "display": "Encounter Diagnosis"
+                            }
+                        ],
+                        "text": "Encounter Diagnosis"
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://racsel.org/connectathon",
+                            "code": "D19",
+                            "display": "Endocarditis infecciosa"
+                        },
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "233850007",
+                            "display": "Infective endocarditis (disorder)"
+                        },
+                        {
+                            "system": "http://hl7.org/fhir/sid/icd-10",
+                            "code": "I33.0",
+                            "display": "Endocarditis infecciosa aguda y subaguda"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "urn:uuid:ed9a056a-706f-432f-9d32-db9e7b4e59d7"
+                },
+                "onsetDateTime": "2024-10-23",
+                "recorder": {
+                    "reference": "urn:uuid:98c3ff50-9e17-40b2-8df7-7c4d893d238a"
+                }
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:29f62ca2-2fa7-425a-aaf8-1c278a58cd0a",
+            "resource": {
+                "resourceType": "AllergyIntolerance",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Información acerca de alergia del paciente</div>"
+                },
+                "clinicalStatus": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+                            "code": "active",
+                            "display": "Active"
+                        }
+                    ]
+                },
+                "verificationStatus": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+                            "code": "unconfirmed",
+                            "display": "Unconfirmed"
+                        }
+                    ]
+                },
+                "type": "allergy",
+                "criticality": "high",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://racsel.org/connectathon",
+                            "code": "A6",
+                            "display": "Alergia a picadura de insectos"
+                        },
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "151201000119107",
+                            "display": "Allergy to insect venom (finding)"
+                        }
+                    ]
+                },
+                "patient": {
+                    "reference": "urn:uuid:ed9a056a-706f-432f-9d32-db9e7b4e59d7"
+                },
+                "onsetDateTime": "2024-10-23",
+                "recorder": {
+                    "reference": "urn:uuid:98c3ff50-9e17-40b2-8df7-7c4d893d238a"
+                }
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:08afc82e-25a2-4a1a-bf7e-879584d82177",
+            "resource": {
+                "resourceType": "AllergyIntolerance",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Información acerca de alergia del paciente</div>"
+                },
+                "clinicalStatus": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+                            "code": "active",
+                            "display": "Active"
+                        }
+                    ]
+                },
+                "verificationStatus": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+                            "code": "unconfirmed",
+                            "display": "Unconfirmed"
+                        }
+                    ]
+                },
+                "type": "allergy",
+                "criticality": "low",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://racsel.org/connectathon",
+                            "code": "A15",
+                            "display": "Alergia a corticosteroides"
+                        },
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "294677009",
+                            "display": "Allergy to corticosteroid and/or corticosteroid derivative (finding)"
+                        }
+                    ]
+                },
+                "patient": {
+                    "reference": "urn:uuid:ed9a056a-706f-432f-9d32-db9e7b4e59d7"
+                },
+                "onsetDateTime": "2024-10-23",
+                "recorder": {
+                    "reference": "urn:uuid:98c3ff50-9e17-40b2-8df7-7c4d893d238a"
+                }
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:70956797-6376-4703-b41c-e7d23f82f551",
+            "resource": {
+                "resourceType": "MedicationStatement",
+                "meta": {
+                    "versionId": "1",
+                    "lastUpdated": "2024-10-23T19:17:17.939+00:00",
+                    "source": "#a3b28afecc2aa5d0"
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Descripción para la Medicación</div>"
+                },
+                "status": "active",
+                "medicationReference": {
+                    "reference": "urn:uuid:ae343e64-7907-45df-8b2b-8492f0f4376f"
+                },
+                "subject": {
+                    "reference": "urn:uuid:ed9a056a-706f-432f-9d32-db9e7b4e59d7"
+                },
+                "effectiveDateTime": "2024-10-23",
+                "dateAsserted": "2024-10-23",
+                "dosage": [
+                    {
+                        "timing": {
+                            "repeat": {
+                                "count": 1,
+                                "periodUnit": "d"
+                            }
+                        },
+                        "route": {
+                            "coding": [
+                                {
+                                    "system": "urn:uuid:ae343e64-7907-45df-8b2b-8492f0f4376f",
+                                    "code": "00706012",
+                                    "display": "Valsartán"
+                                }
+                            ]
+                        },
+                        "doseAndRate": [
+                            {
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+                                            "code": "ordered",
+                                            "display": "Ordered"
+                                        }
+                                    ]
+                                },
+                                "doseQuantity": {
+                                    "value": 1,
+                                    "unit": "Ampolla",
+                                    "system": "http://unitsofmeasure.org"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:ae343e64-7907-45df-8b2b-8492f0f4376f",
+            "resource": {
+                "resourceType": "Medication",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative</div>"
+                },
+                "code": {
+                    "coding": [
+                        {
+                            "system": "urn:uuid:ae343e64-7907-45df-8b2b-8492f0f4376f",
+                            "code": "00706012",
+                            "display": "Valsartán"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:4ca21d7c-8015-4e3e-b660-c32fc912b087",
+            "resource": {
+                "resourceType": "MedicationStatement",
+                "meta": {
+                    "versionId": "1",
+                    "lastUpdated": "2024-10-23T19:17:17.939+00:00",
+                    "source": "#a3b28afecc2aa5d0"
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Descripción para la Medicación</div>"
+                },
+                "status": "active",
+                "medicationReference": {
+                    "reference": "urn:uuid:77ee34c3-d3f1-4760-a92a-68412bbaee39"
+                },
+                "subject": {
+                    "reference": "urn:uuid:ed9a056a-706f-432f-9d32-db9e7b4e59d7"
+                },
+                "effectiveDateTime": "2024-10-23",
+                "dateAsserted": "2024-10-23",
+                "dosage": [
+                    {
+                        "timing": {
+                            "repeat": {
+                                "count": 1,
+                                "periodUnit": "d"
+                            }
+                        },
+                        "route": {
+                            "coding": [
+                                {
+                                    "system": "urn:uuid:77ee34c3-d3f1-4760-a92a-68412bbaee39",
+                                    "code": "02303010",
+                                    "display": "Levotiroxina Sódica"
+                                }
+                            ]
+                        },
+                        "doseAndRate": [
+                            {
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+                                            "code": "ordered",
+                                            "display": "Ordered"
+                                        }
+                                    ]
+                                },
+                                "doseQuantity": {
+                                    "value": 1,
+                                    "unit": "Tableta",
+                                    "system": "http://unitsofmeasure.org"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:77ee34c3-d3f1-4760-a92a-68412bbaee39",
+            "resource": {
+                "resourceType": "Medication",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative</div>"
+                },
+                "code": {
+                    "coding": [
+                        {
+                            "system": "urn:uuid:77ee34c3-d3f1-4760-a92a-68412bbaee39",
+                            "code": "02303010",
+                            "display": "Levotiroxina Sódica"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:ab945a36-4c74-4c8e-92e2-2f1ec8050a58",
+            "resource": {
+                "resourceType": "MedicationStatement",
+                "meta": {
+                    "versionId": "1",
+                    "lastUpdated": "2024-10-23T19:17:17.939+00:00",
+                    "source": "#a3b28afecc2aa5d0"
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Descripción para la Medicación</div>"
+                },
+                "status": "active",
+                "medicationReference": {
+                    "reference": "urn:uuid:87e600cc-3999-4104-b5ec-4ba27bf4d0cc"
+                },
+                "subject": {
+                    "reference": "urn:uuid:ed9a056a-706f-432f-9d32-db9e7b4e59d7"
+                },
+                "effectiveDateTime": "2024-10-23",
+                "dateAsserted": "2024-10-23",
+                "dosage": [
+                    {
+                        "timing": {
+                            "repeat": {
+                                "count": 1,
+                                "periodUnit": "d"
+                            }
+                        },
+                        "route": {
+                            "coding": [
+                                {
+                                    "system": "http://racsel.org/connectathon",
+                                    "code": "M20",
+                                    "display": "Acido acetilsalicílico"
+                                },
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "7947003",
+                                    "display": "Product containing aspirin (medicinal product)"
+                                }
+                            ]
+                        },
+                        "doseAndRate": [
+                            {
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+                                            "code": "ordered",
+                                            "display": "Ordered"
+                                        }
+                                    ]
+                                },
+                                "doseQuantity": {
+                                    "value": 1,
+                                    "unit": "Tableta",
+                                    "system": "http://unitsofmeasure.org"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:87e600cc-3999-4104-b5ec-4ba27bf4d0cc",
+            "resource": {
+                "resourceType": "Medication",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative</div>"
+                },
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://racsel.org/connectathon",
+                            "code": "M20",
+                            "display": "Acido acetilsalicílico"
+                        },
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "7947003",
+                            "display": "Product containing aspirin (medicinal product)"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:582cab6e-3852-401f-b44a-ad336302efb5",
+            "resource": {
+                "resourceType": "Immunization",
+                "meta": {
+                    "versionId": "1",
+                    "lastUpdated": "2024-10-23T19:17:33.810+00:00",
+                    "source": "#1b64d5f0f2e8a1ef"
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Información para la vacuna</div>"
+                },
+                "status": "completed",
+                "vaccineCode": {
+                    "coding": [
+                        {
+                            "system": "urn:uuid:582cab6e-3852-401f-b44a-ad336302efb5",
+                            "code": "V00043",
+                            "display": "Antirrábica"
+                        }
+                    ]
+                },
+                "patient": {
+                    "reference": "urn:uuid:ed9a056a-706f-432f-9d32-db9e7b4e59d7"
+                },
+                "occurrenceDateTime": "2024-10-23",
+                "manufacturer": {
+                    "reference": "urn:uuid:41962b2b-10fc-4265-a67e-52988fe4b931"
+                },
+                "lotNumber": "2323F23",
+                "expirationDate": "2034-10-20",
+                "performer": [
+                    {
+                        "actor": {
+                            "reference": "urn:uuid:bfe8d074-900b-4778-847f-84ca5e9a2a35"
+                        }
+                    }
+                ],
+                "protocolApplied": [
+                    {
+                        "targetDisease": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://id.who.int/icd11/mms",
+                                        "code": "1F01",
+                                        "display": "Rabies virus infection"
+                                    }
+                                ]
+                            }
+                        ],
+                        "doseNumberPositiveInt": 2
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:bfe8d074-900b-4778-847f-84ca5e9a2a35",
+            "resource": {
+                "resourceType": "Practitioner",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Practitioner Data</div>"
+                },
+                "name": [
+                    {
+                        "text": "Salvador Salazar Arrué"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:41962b2b-10fc-4265-a67e-52988fe4b931",
+            "resource": {
+                "resourceType": "Organization",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Vaccine Manufacturer</div>"
+                },
+                "name": "Dev-Conectaton-Marca-1"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:3c450651-9161-4fc0-b5b9-79b938d5231b",
+            "resource": {
+                "resourceType": "Condition",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Descripcion de antecedente de la enfermedad Otras enfermedades cardiovasculares (Excepto HTA)&quot;...</div>"
+                },
+                "clinicalStatus": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                            "code": "active"
+                        }
+                    ]
+                },
+                "verificationStatus": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                            "code": "confirmed"
+                        }
+                    ]
+                },
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                                "code": "problem-list-item",
+                                "display": "Problem List Item"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/sid/icd-10",
+                            "code": "T46.9",
+                            "display": "Other and unspecified agents primarily affecting the cardiovascular system"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "urn:uuid:ed9a056a-706f-432f-9d32-db9e7b4e59d7"
+                },
+                "onsetDateTime": "2024-10-23"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:b92cca07-fe52-4cbb-98aa-2240fa04c262",
+            "resource": {
+                "resourceType": "Condition",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Descripcion de antecedente de la enfermedad Hepatitis B&quot;...</div>"
+                },
+                "clinicalStatus": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                            "code": "active"
+                        }
+                    ]
+                },
+                "verificationStatus": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                            "code": "confirmed"
+                        }
+                    ]
+                },
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                                "code": "problem-list-item",
+                                "display": "Problem List Item"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/sid/icd-10",
+                            "code": "B18",
+                            "display": "Chronic viral hepatitis"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "urn:uuid:ed9a056a-706f-432f-9d32-db9e7b4e59d7"
+                },
+                "onsetDateTime": "2024-10-23"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:c9c3beb0-f0a2-40f6-a353-374b7e4042cd",
+            "resource": {
+                "resourceType": "Practitioner",
+                "meta": {
+                    "versionId": "1",
+                    "lastUpdated": "2024-10-23T19:18:17.949+00:00",
+                    "source": "#ba1f0a9fe6f4a58d"
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Información acerca del empleado</div>"
+                },
+                "active": true,
+                "name": [
+                    {
+                        "use": "official",
+                        "family": "SISTEMA",
+                        "given": [
+                            "ADMINISTRADOR"
+                        ],
+                        "suffix": [
+                            "MD"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:cb7ff5b4-87dd-4e49-bc72-3794b3b215d2",
+            "resource": {
+                "resourceType": "Procedure",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Descripcion de procedimiento con id cb7ff5b4-87dd-4e49-bc72-3794b3b215d2...</div>"
+                },
+                "status": "completed",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "46973005",
+                            "display": "Blood pressure taking (procedure)"
+                        },
+                        {
+                            "system": "http://racsel.org/connectathon",
+                            "code": "P16",
+                            "display": "Toma de tensión arterial sistémica"
+                        },
+                        {
+                            "system": "http://hl7.org/fhir/sid/icd-9-cm",
+                            "code": "89.61",
+                            "display": "Monitorizacion De Presión Arterial Sistemica"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "urn:uuid:ed9a056a-706f-432f-9d32-db9e7b4e59d7"
+                },
+                "performedPeriod": {
+                    "start": "2024-10-24T00:00:00.000+00:00",
+                    "end": "2024-10-24T00:00:00.000+00:00"
+                },
+                "performer": [
+                    {
+                        "actor": {
+                            "reference": "urn:uuid:c9c3beb0-f0a2-40f6-a353-374b7e4042cd"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:bc995676-c9c0-4241-998e-61cdadbf1f87",
+            "resource": {
+                "resourceType": "Procedure",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Descripcion de procedimiento con id bc995676-c9c0-4241-998e-61cdadbf1f87...</div>"
+                },
+                "status": "completed",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://racsel.org/connectathon",
+                            "code": "P7",
+                            "display": "Espirometría"
+                        },
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "127783003",
+                            "display": "Spirometry (procedure)"
+                        },
+                        {
+                            "system": "http://hl7.org/fhir/sid/icd-9-cm",
+                            "code": "89.38",
+                            "display": "Otras Mediciónes Respiratorias No Quirúrgicas"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "urn:uuid:ed9a056a-706f-432f-9d32-db9e7b4e59d7"
+                },
+                "performedPeriod": {
+                    "start": "2024-10-24T00:00:00.000+00:00",
+                    "end": "2024-10-24T00:00:00.000+00:00"
+                },
+                "performer": [
+                    {
+                        "actor": {
+                            "reference": "urn:uuid:c9c3beb0-f0a2-40f6-a353-374b7e4042cd"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:66b6872c-2733-479b-842b-68cde48595b2",
+            "resource": {
+                "resourceType": "Immunization",
+                "meta": {
+                    "versionId": "1",
+                    "lastUpdated": "2024-10-23T23:04:41.321+00:00",
+                    "source": "#1b64d5f0f2e8a1ef"
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Información para la vacuna</div>"
+                },
+                "status": "completed",
+                "vaccineCode": {
+                    "coding": [
+                        {
+                            "system": "http://id.who.int/icd/release/11/mms",
+                            "code": "XM9V38",
+                            "display": "Vacuna contra la Hepatitis B, antígeno purificado"
+                        },
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "836374004",
+                            "display": "Hepatitis B"
+                        }
+                    ]
+                },
+                "patient": {
+                    "reference": "urn:uuid:ed9a056a-706f-432f-9d32-db9e7b4e59d7"
+                },
+                "occurrenceDateTime": "2024-10-22",
+                "manufacturer": {
+                    "reference": "urn:uuid:291c69c1-562f-44d2-9523-7c1617a4b5fd"
+                },
+                "lotNumber": "1F2",
+                "expirationDate": "2034-10-20",
+                "performer": [
+                    {
+                        "actor": {
+                            "reference": "urn:uuid:fc3089ad-51ff-4227-84b9-8072c35c45a2"
+                        }
+                    }
+                ],
+                "protocolApplied": [
+                    {
+                        "authority": {
+                            "reference": "urn:uuid:291c69c1-562f-44d2-9523-7c1617a4b5fd"
+                        },
+                        "targetDisease": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://id.who.int/icd11/mms",
+                                        "code": "1E50.1",
+                                        "display": "Acute hepatitis B"
+                                    }
+                                ]
+                            }
+                        ],
+                        "doseNumberPositiveInt": 1
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:fc3089ad-51ff-4227-84b9-8072c35c45a2",
+            "resource": {
+                "resourceType": "Practitioner",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Practitioner Data</div>"
+                },
+                "name": [
+                    {
+                        "text": "Salvador Salazar Arrué"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:291c69c1-562f-44d2-9523-7c1617a4b5fd",
+            "resource": {
+                "resourceType": "Organization",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Vaccine Manufacturer</div>"
+                },
+                "type": [
+                    {
+                        "coding": [
+                            {
+                                "system": "https://profiles.ihe.net/ITI/mCSD/CodeSystem/IHE.mCSD.Organization.Location.Types",
+                                "code": "jurisdiction"
+                            }
+                        ]
+                    }
+                ],
+                "name": "Dev-Conectaton-Marca-1"
+            }
+        }
+    ],
+    "signature": {
+        "type": [
+            {
+                "system": "urn:iso-astm:E1762-95:2013",
+                "code": "1.2.840.10065.1.12.1.5"
+            }
+        ],
+        "when": "2024-10-23T19:17:34.690Z",
+        "who": {
+            "identifier": {
+                "value": "LACPass"
+            }
+        },
+        "data": "Tc6LAwEYUTUVnXnV2klRRWuQTnLFhgjWZ1/jZbKbDROn4VBxY7KJ5UkjS176mh4z9tjC/DFezI9KGtn2M4yPnRPUGPqmjsC96AUDVC3SigRvrCKUviblnbpEpmIf0kaMuKR9eRtjX1jJt6RIVEZwSJuL5RDvTFEl93lsUZvaULnC3W1/vCHq/ewMxUW4cHUsN6oc2rThcVRLmoJ/TYbzqyv+SgLX4NZ/WzKyEHS1MgCPZ2z9bPf/LA+DeZLbqeVhKkLU9+Lb8BEpXI1hfN8NFjVMla/yRLAooufsb9Nohl0/JkffZURj0A51ztHmdgljK2/1sI/c9JtCS377J32gmR7b96YhkvbYamn/OKiaP2snfeUp1838BxAZlzivtZzIU0VijbSRVAHL52enY5oliwzZTWuDvuSGxjzJD/VlZFUD7G136r1fb29XvTTVq+YmK7U7tiWUhIpKxo0dCef7dm+SHk8/jPRsafGNoRaM5FN/qVjQN3TFUg/jqJwtD+oo1eysbn4cAYIAWTPPjU+9r3nWbu7D61a7p6QgIG0XdKIeB60DitgfqJHKrCxFlEFVPdWlqo9qVFUpC3fW0K2X9Z6zp5NnpsQQ+cDna8Y1INt6Q9i7qBxwwLnE0A1mBYEktmGuWp2rFEYqEu7jL0eoW9XQ/zSgtYH1xnB7gX+tlX0="
+    }
+}
