@@ -1,0 +1,79 @@
+{ 
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "id": "../src/JsonSchema/schemas/vacuna_base.json",
+    "title": "Vacuna Base",
+    "type": "object",
+    "properties": {
+        "id_persona": {
+            "$ref": "definitions.json#/definitions/uuidRequired"
+        },
+        "esquema_a_la_fecha": {
+            "type": ["boolean", "null"]
+        },
+        "vacunas": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+                "properties": {
+                    "nombre": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 100
+                    },
+                    "codigo": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 15
+                    },
+                    "dosis": {
+                        "type": "array",
+                        "minItems": 1,
+                        "uniqueItems": true,
+                        "items": {
+                            "properties": {
+                                "id": {
+                                    "type": "integer",
+                                    "minimum": 1
+                                },
+                                "nombre": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "maxLength": 50
+                                },
+                                "fecha_aplicacion": {
+                                    "$ref": "definitions.json#/definitions/dateRequired"
+                                },
+                                "id_establecimiento_aplicacion": {
+                                    "$ref": "definitions.json#/definitions/integerId"
+                                },
+                                "nombre_establecimiento_aplicacion": {
+                                    "$ref": "definitions.json#/definitions/stringNoBlank"
+                                },
+                                "empleado_aplico": {
+                                    "$ref": "definitions.json#/definitions/stringNoBlank"
+                                },
+                                "siglas_sistema": {
+                                    "$ref": "definitions.json#/definitions/stringNoBlank"
+                                },
+                                "nombre_sistema": {
+                                    "$ref": "definitions.json#/definitions/stringNoBlank"
+                                },
+                                "id_establecimiento_registra": {
+                                    "$ref": "definitions.json#/definitions/integerId"
+                                },
+                                "nombre_establecimiento_registra": {
+                                    "$ref": "definitions.json#/definitions/stringNoBlank"
+                                }
+                            },
+                            "additionalProperties": false,
+                            "required": [ "id", "nombre", "fecha_aplicacion", "id_establecimiento_aplicacion", "nombre_establecimiento_aplicacion", "empleado_aplico", "siglas_sistema", "nombre_sistema" ]
+                        }
+                    }
+                },
+                "additionalProperties": false,
+                "required": [ "nombre", "codigo", "dosis" ]
+            }
+        }
+    }
+}

@@ -1,0 +1,258 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "id": "../src/JsonSchema/schemas/historia_clinica_base.json",
+    "title": "Historias Clinicas Base",
+    "type": "object",
+    "definitions": {
+        "diganostico_cie10": {
+            "type": "object",
+            "properties": {
+                "id_cie10_estadistico":     { "$ref": "definitions.json#/definitions/integerIdOptional"  },
+                "codigo_cie10_estadistico": { "$ref": "definitions.json#/definitions/stringOptional"  },
+                "nombre_cie10_estadistico": { "$ref": "definitions.json#/definitions/stringOptional"  },
+                "id_cie10_medico":          { "$ref": "definitions.json#/definitions/integerId"  },
+                "codigo_cie10_medico":      { "$ref": "definitions.json#/definitions/stringNoBlank"  },
+                "nombre_cie10_medico":      { "$ref": "definitions.json#/definitions/stringNoBlank"  },
+                "descripcion":              { "$ref": "definitions.json#/definitions/stringOptional" },
+                "confirmado":               { "type": ["boolean", "null"] },
+                "id_tipo_consulta":         { "$ref": "definitions.json#/definitions/integerIdOptional" },
+                "nombre_tipo_consulta":     { "$ref": "definitions.json#/definitions/stringOptional" }
+            }
+        }
+    },
+    "properties": {
+        "id_persona": {
+            "$ref": "definitions.json#/definitions/uuidRequired"
+        },
+        "id_expediente": {
+            "$ref": "definitions.json#/definitions/integerId"
+        },
+        "id_establecimiento": {
+            "$ref": "definitions.json#/definitions/integerId"
+        },
+        "id_historial_clinico": {
+            "$ref": "definitions.json#/definitions/integerId"
+        },
+        "id_atencion": {
+            "$ref": "definitions.json#/definitions/integerId"
+        },
+        "nombre_atencion": {
+            "$ref": "definitions.json#/definitions/stringNoBlank"
+        },
+        "id_area_atencion": {
+            "$ref": "definitions.json#/definitions/integerId"
+        },
+        "nombre_area_atencion": {
+            "$ref": "definitions.json#/definitions/stringNoBlank"
+        },
+        "id_modalidad": {
+            "$ref": "definitions.json#/definitions/integerId"
+        },
+        "nombre_modalidad": {
+            "$ref": "definitions.json#/definitions/stringNoBlank"
+        },
+        "empleado": {
+            "allOf": [
+                { "$ref": "definitions.json#/definitions/persona" }
+            ],
+            "properties": {
+                "id": {
+                    "$ref": "definitions.json#/definitions/integerId"
+                },
+                "tipo": {
+                    "$ref": "definitions.json#/definitions/integerId"
+                },
+                "jrv": {
+                    "$ref": "definitions.json#/definitions/stringOptional"
+                },
+                "primer_nombre": {},
+                "segundo_nombre": {},
+                "tercer_nombre": {},
+                "primer_apellido": {},
+                "segundo_apellido": {},
+                "apellido_casada": {},
+                "nombre_completo": {}
+            },
+            "required": ["id", "tipo", "jrv", "primer_nombre", "segundo_nombre", "tercer_nombre", "primer_apellido", "segundo_apellido", "apellido_casada", "nombre_completo"],
+            "additionalProperties": false
+        },
+        "fecha_consulta": {
+            "$ref": "definitions.json#/definitions/dateRequired"
+        },
+        "motivo_consulta": {
+            "$ref": "definitions.json#/definitions/stringNoBlank"
+        },
+        "presenta_enfermedad": {
+            "$ref": "definitions.json#/definitions/stringNoBlank"
+        },
+        "diagnosticos": {
+            "type": "object",
+            "properties": {
+                "cie10": {
+                    "type": "object",
+                    "properties": {
+                        "primario": {
+                            "allOf": [
+                                { "$ref": "#/definitions/diganostico_cie10" }
+                            ],
+                            "properties": {
+                                "id_cie10_estadistico": {},
+                                "codigo_cie10_estadistico": {},
+                                "nombre_cie10_estadistico": {},
+                                "id_cie10_medico": {},
+                                "codigo_cie10_medico": {},
+                                "nombre_cie10_medico": {},
+                                "descripcion": {},
+                                "confirmado": {},
+                                "id_tipo_consulta": {},
+                                "nombre_tipo_consulta": {}
+                            },
+                            "required": ["id_cie10_estadistico", "codigo_cie10_estadistico", "nombre_cie10_estadistico", "id_cie10_medico", "codigo_cie10_medico", "nombre_cie10_medico", "descripcion", "confirmado", "id_tipo_consulta", "nombre_tipo_consulta"],
+                            "additionalProperties": false
+                        },
+                        "secundario":{
+                            "type": ["array","null"],
+                            "minItems": 1,
+                            "uniqueItems": true,
+                            "items": {
+                                "allOf": [
+                                    { "$ref": "#/definitions/diganostico_cie10" }
+                                ],
+                                "properties": {
+                                    "id_cie10_estadistico": {},
+                                    "codigo_cie10_estadistico": {},
+                                    "nombre_cie10_estadistico": {},
+                                    "id_cie10_medico": {},
+                                    "codigo_cie10_medico": {},
+                                    "nombre_cie10_medico": {},
+                                    "descripcion": {},
+                                    "confirmado": {},
+                                    "id_tipo_consulta": {},
+                                    "nombre_tipo_consulta": {}
+                                },
+                                "required": ["id_cie10_estadistico", "codigo_cie10_estadistico", "nombre_cie10_estadistico", "id_cie10_medico", "codigo_cie10_medico", "nombre_cie10_medico", "descripcion", "confirmado", "id_tipo_consulta", "nombre_tipo_consulta"],
+                                "additionalProperties": false
+                            }
+                        },
+                        "causa_externa": {
+                            "anyOf": [
+                                { "$ref": "#/definitions/diganostico_cie10" },
+                                { "type": "null" }
+                            ],
+                            "properties": {
+                                "id_cie10_estadistico": {},
+                                "codigo_cie10_estadistico": {},
+                                "nombre_cie10_estadistico": {},
+                                "id_cie10_medico": {},
+                                "codigo_cie10_medico": {},
+                                "nombre_cie10_medico": {},
+                                "descripcion": {}
+                            },
+                            "required": ["id_cie10_estadistico", "codigo_cie10_estadistico", "nombre_cie10_estadistico", "id_cie10_medico", "codigo_cie10_medico", "nombre_cie10_medico", "descripcion"],
+                            "additionalProperties": false
+                        }
+                    },
+                    "required": ["primario", "secundario", "causa_externa"],
+                    "additionalProperties": false
+                },
+                "otros": {
+                    "type": ["array", "null"],
+                    "minItems": 1,
+                    "uniqueItems": true,
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": ["cie10"],
+            "additionalProperties": false
+        },
+        "signos_vitales": {
+            "type": ["object", "null"],
+            "anyOf": [
+                { "required": ["talla"] },
+                { "required": ["um_talla"] },
+                { "required": ["peso"] },
+                { "required": ["um_peso"] },
+                { "required": ["temperatura"] },
+                { "required": ["um_temperatura"] },
+                { "required": ["frecuencia_respiratoria"] },
+                { "required": ["frecuencia_cardiaca"] },
+                { "required": ["presion_arterial"] }
+            ],
+            "properties": {
+                "talla":                   { "$ref": "definitions.json#/definitions/numberPositiveOptional" },
+                "um_talla":                { "$ref": "definitions.json#/definitions/stringOptional" },
+                "peso":                    { "$ref": "definitions.json#/definitions/numberPositiveOptional" },
+                "um_peso":                 { "$ref": "definitions.json#/definitions/stringOptional" },
+                "temperatura":             { "$ref": "definitions.json#/definitions/numberPositiveOptional" },
+                "um_temperatura":          { "$ref": "definitions.json#/definitions/stringOptional" },
+                "frecuencia_cardiaca":     { "$ref": "definitions.json#/definitions/numberPositiveOptional" },
+                "frecuencia_respiratoria": { "$ref": "definitions.json#/definitions/numberPositiveOptional" },
+                "presion_arterial":        { "type": ["integer", "string","null"] },
+                "indice_masa_corporal":    { "$ref": "definitions.json#/definitions/numberPositiveOptional" }
+            }
+        },
+        "examen_fisico": {
+            "type": ["array","null"],
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id_region_cuerpo":     { "$ref": "definitions.json#/definitions/integerId" },
+                    "nombre_region_cuerpo": { "$ref": "definitions.json#/definitions/stringNoBlank" },
+                    "id_estado":            { "$ref": "definitions.json#/definitions/integerId" },
+                    "nombre_estado":        { "$ref": "definitions.json#/definitions/stringNoBlank" },
+                    "descripcion":          { "$ref": "definitions.json#/definitions/stringOptionalVoid" },
+                    "anormalidades":        {
+                        "type": ["array","null"],
+                        "minItems": 1,
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "id":         { "$ref": "definitions.json#/definitions/integerId" },
+                                "nombre":     { "$ref": "definitions.json#/definitions/stringNoBlank" }
+                            },
+                            "required": ["id", "nombre"],
+                            "additionalProperties": false
+                        }
+                    }
+                },
+                "required": ["id_region_cuerpo", "nombre_region_cuerpo", "id_estado", "nombre_estado", "descripcion"],
+                "additionalProperties": false
+            }
+        },
+        "datos_obstetricos": {
+            "type": ["object", "null"],
+            "anyOf": [
+                { "required": ["embarazo"] },
+                { "required": ["semanas_amenorrea"] },
+                { "required": ["fecha_ultima_menstruacion"] },
+                { "required": ["frecuencia_respiratoria"] },
+                { "required": ["fecha_probable_parto"] },
+                { "required": ["formula_obstetrica"] }
+            ],
+            "properties": {
+                "embarazo":                  { "type": "boolean" },
+                "semanas_amenorrea":         { "$ref": "definitions.json#/definitions/integerPositiveOptional" },
+                "fecha_ultima_menstruacion": { "$ref": "definitions.json#/definitions/dateOptional" },
+                "fecha_probable_parto":      { "$ref": "definitions.json#/definitions/dateOptional"  },
+                "formula_obstetrica":        {
+                    "type": ["object", "null"],
+                    "properties": {
+                        "G":  { "type": ["string", "null", "integer"]  },
+                        "P":  { "type": ["string", "null", "integer"]  },
+                        "PP": { "type": ["string", "null", "integer"]  },
+                        "A":  { "type": ["string", "null", "integer"]  },
+                        "V":  { "type": ["string", "null", "integer"]  }
+                    },
+                    "required": ["G", "P", "PP", "A", "V"]
+                },
+                "id_establecimiento_control":     { "$ref": "definitions.json#/definitions/integerIdOptional"  },
+                "nombre_establecimiento_control": { "$ref": "definitions.json#/definitions/stringOptional"  }
+            },
+            "additionalProperties": false
+        }
+    }
+}

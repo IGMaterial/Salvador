@@ -1,0 +1,169 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "id": "../src/JsonSchema/schemas/receta_base.json",
+    "title": "Receta Base",
+    "type": "object",
+    "properties": {
+        "id_persona": {
+            "$ref": "definitions.json#/definitions/uuidRequired"
+        },
+        "id_establecimiento": {
+            "$ref": "definitions.json#/definitions/integerId"
+        },
+        "nombre_establecimiento": {
+            "$ref": "definitions.json#/definitions/stringNoBlank"
+        },
+        "id_expediente": {
+            "$ref": "definitions.json#/definitions/integerId"
+        },
+        "id_historial_clinico": {
+            "$ref": "definitions.json#/definitions/integerId"
+        },
+        "id_receta": {
+            "$ref": "definitions.json#/definitions/integerId"
+        },
+        "codigo": {
+            "$ref": "definitions.json#/definitions/stringOptional"
+        },
+        "id_estado": {
+            "$ref": "definitions.json#/definitions/integerId"
+        },
+        "codigo_estado": {
+            "$ref": "definitions.json#/definitions/stringNoBlank"
+        },
+        "nombre_estado": {
+            "$ref": "definitions.json#/definitions/stringNoBlank"
+        },
+        "rango_hora": {
+            "type": ["object", "null"],
+             "properties": {
+                  "id":                   { "$ref": "definitions.json#/definitions/integerId" },
+                  "hora_inicial":         { "$ref": "definitions.json#/definitions/timeRequired" },
+                  "hora_final":           { "$ref": "definitions.json#/definitions/timeRequired" }
+            },
+            "required": ["id", "hora_inicial", "hora_final"],
+            "additionalProperties": false
+        },
+        "prescripcion": {
+            "type": "object",
+            "properties": {
+                "fecha": {
+                    "$ref": "definitions.json#/definitions/dateRequired"
+                },
+                "id_empleado": {
+                    "$ref": "definitions.json#/definitions/integerId"
+                },
+                "nombre_empleado": {
+                    "$ref": "definitions.json#/definitions/stringNoBlank"
+                },
+                "id_modalidad": {
+                    "$ref": "definitions.json#/definitions/integerId"
+                },
+                "nombre_modalidad": {
+                    "$ref": "definitions.json#/definitions/stringNoBlank"
+                },
+                "id_area": {
+                    "$ref": "definitions.json#/definitions/integerId"
+                },
+                "nombre_area": {
+                    "$ref": "definitions.json#/definitions/stringNoBlank"
+                },
+                "id_especialidad": {
+                    "$ref": "definitions.json#/definitions/integerId"
+                },
+                "nombre_especialidad": {
+                    "$ref": "definitions.json#/definitions/stringNoBlank"
+                }
+            },
+            "required": ["fecha", "id_empleado", "nombre_empleado", "id_modalidad", "nombre_modalidad", "id_area", "nombre_area", "id_especialidad", "nombre_especialidad"],
+            "additionalProperties": false
+        },
+        "medicamentos": {
+            "type": ["array","null"],
+            "minItems": 1,
+            "uniqueItems": false,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id":                 { "$ref": "definitions.json#/definitions/integerId" },
+                    "codigo":             { "$ref": "definitions.json#/definitions/stringNoBlank" },
+                    "nombre":             { "$ref": "definitions.json#/definitions/stringNoBlank" },
+                    "detalle_medicamento": {
+                        "type": ["object", "null"],
+                        "properties": {
+                            "forma_farmaceutica": { "$ref": "definitions.json#/definitions/stringOptional" },
+                            "presentacion":       { "$ref": "definitions.json#/definitions/stringOptional" },
+                            "concentracion":      { "$ref": "definitions.json#/definitions/stringOptionalVoid" }
+                        },
+                        "additionalProperties": false,
+                        "required": [ "forma_farmaceutica", "presentacion", "concentracion" ]
+                    },
+                    "fecha_entrega":      { "$ref": "definitions.json#/definitions/dateRequired" },
+                    "fecha_entregada":    { "$ref": "definitions.json#/definitions/dateOptional" },
+                    "dosis": {
+                        "type": ["object", "null"],
+                        "properties": {
+                            "id_dosificacion":        { "$ref": "definitions.json#/definitions/integerId" },
+                            "nombre_dosificacion":    { "$ref": "definitions.json#/definitions/stringNoBlank" },
+                            "cantidad_dosificacion":  {
+                                "type": ["number", "null"],
+                                "minimum": 0
+                            },
+                            "nombre_frecuencia":      { "$ref": "definitions.json#/definitions/stringNoBlank" },
+                            "cantidad_frecuencia":    {
+                                "type": ["number", "null"],
+                                "minimum": 0
+                            },
+                            "nombre_periodo":         { "$ref": "definitions.json#/definitions/stringNoBlank" },
+                            "cantidad_periodo":       { "$ref": "definitions.json#/definitions/stringOptionalVoid" },
+                            "dosis_descripcion":      { "$ref": "definitions.json#/definitions/stringNoBlank" },
+                            "distribucion": {
+                                "type": ["array", "null"],
+                                "minItems": 1,
+                                "uniqueItems": false,
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "cantidad":   {
+                                            "type": "number",
+                                            "minimum": 0.0001
+                                        },
+                                        "indicacion": { "$ref": "definitions.json#/definitions/stringNoBlank" }
+                                    },
+                                    "required": ["cantidad", "indicacion"],
+                                    "additionalProperties": false
+                                }
+                            },
+                            "required": [ "id_dosificacion", "nombre_dosificacion", "cantidad_dosificacion", "nombre_frecuencia", "cantidad_frecuencia", "nombre_periodo", "cantidad_periodo", "dosis_descripcion", "distribucion" ],
+                            "additionalProperties": false
+                        }
+                    },
+                    "recomendacion":              { "$ref": "definitions.json#/definitions/stringOptional" },
+                    "id_estado":                  { "$ref": "definitions.json#/definitions/integerId" },
+                    "codigo_estado":              { "$ref": "definitions.json#/definitions/stringNoBlank" },
+                    "nombre_estado":              { "$ref": "definitions.json#/definitions/stringNoBlank" },
+                    "id_unidad_medida":           { "$ref": "definitions.json#/definitions/integerId" },
+                    "nombre_unidad_medida":       { "$ref": "definitions.json#/definitions/stringNoBlank" },
+                    "cantidad_prescrita":         { "$ref": "definitions.json#/definitions/numberPositiveOptionalVoid" },
+                    "cantidad_despachada":        {
+                        "type": ["number", "null"],
+                        "minimum": 0
+                    },
+                    "id_lote":                         { "$ref": "definitions.json#/definitions/integerPositiveOptional" },
+                    "codigo_lote":                     { "$ref": "definitions.json#/definitions/stringOptional" },
+                    "justificacion_recorte":           { "$ref": "definitions.json#/definitions/stringOptional" },
+                    "justificacion_prescripcion":      { "$ref": "definitions.json#/definitions/stringOptional" },
+                    "id_medicina_recetada":            { "$ref": "definitions.json#/definitions/integerId" },
+                    "id_empleado_cancela":             { "$ref": "definitions.json#/definitions/integerPositiveOptional" },
+                    "nombre_empleado_cancela":         { "$ref": "definitions.json#/definitions/stringOptional" },
+                    "id_area_dispensa":                { "$ref": "definitions.json#/definitions/integerId" },
+                    "nombre_area_dispensa":            { "$ref": "definitions.json#/definitions/stringNoBlank" },
+                    "id_establecimiento_despacha":     { "$ref": "definitions.json#/definitions/integerId" },
+                    "nombre_establecimiento_despacha": { "$ref": "definitions.json#/definitions/stringNoBlank" }
+                },
+                "required": ["id", "codigo", "nombre", "fecha_entrega","id_estado","codigo_estado","nombre_estado","id_unidad_medida","nombre_unidad_medida","cantidad_prescrita","id_medicina_recetada","id_area_dispensa","nombre_area_dispensa","id_establecimiento_despacha","nombre_establecimiento_despacha"],
+                "additionalProperties": false
+            }
+        }
+    }
+}

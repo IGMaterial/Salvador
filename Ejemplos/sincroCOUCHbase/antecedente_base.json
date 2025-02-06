@@ -1,0 +1,427 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "id": "../src/JsonSchema/schemas/antecedente_base.json",
+    "title": "Antecedente Base",
+    "type": "object",
+    "properties": {
+        "id_persona": {
+            "$ref": "definitions.json#/definitions/uuidRequired"
+        },
+        "id_establecimiento": {
+            "$ref": "definitions.json#/definitions/integerId"
+        },
+        "nombre_establecimiento": {
+            "$ref": "definitions.json#/definitions/stringNoBlank"
+        },
+        "fecha_actualizacion": {
+            "$ref": "definitions.json#/definitions/dateRequired"
+        },
+        "enfermedades": {
+            "type": ["array", "null"],
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id_patologia": {
+                        "$ref": "definitions.json#/definitions/integerId"
+                    },
+                    "nombre_patologia": {
+                        "$ref": "definitions.json#/definitions/stringNoBlank"
+                    },
+                    "respuesta": {
+                        "type": ["integer", "null"],
+                        "minimum": 1,
+                        "maximum": 5
+                    },
+                    "hcp": {
+                        "type":["null","boolean"]
+                    },
+                    "detalle": {
+                        "type": ["object", "null"],
+                        "properties": {
+                            "anio_inicio": {
+                                "type": ["integer", "null"]
+                            },
+                            "especificacion": {
+                                "type": ["string", "null"]
+                            },
+                            "tratamiento_tomado": {
+                                "type": ["string", "null"]
+                            }
+                        },
+                        "required": ["anio_inicio", "especificacion", "tratamiento_tomado"]
+                    }
+                },
+                "required": ["id_patologia", "nombre_patologia", "detalle"]
+            }
+        },
+        "diagnosticos": {
+            "type": ["array", "null"],
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "fecha": {
+                        "$ref": "definitions.json#/definitions/dateRequired"
+                    },
+                    "descripcion": {
+                        "type": ["string", "null"]
+                    },
+                    "id_cie10_medico": {
+                        "$ref": "definitions.json#/definitions/integerId"
+                    },
+                    "codigo_cie10_medico": {
+                        "$ref": "definitions.json#/definitions/stringNoBlank"
+                    },
+                    "nombre_cie10_medico": {
+                        "$ref": "definitions.json#/definitions/stringNoBlank"
+                    },
+                    "id_cie10_estadistico": {
+                        "$ref": "definitions.json#/definitions/integerIdOptional"
+                    },
+                    "codigo_cie10_estadistico": {
+                        "$ref": "definitions.json#/definitions/stringOptional"
+                    },
+                    "nombre_cie10_estadistico": {
+                        "$ref": "definitions.json#/definitions/stringOptional"
+                    }
+                },
+                "required": ["fecha", "descripcion", "id_cie10_medico", "codigo_cie10_medico", "nombre_cie10_medico", "id_cie10_estadistico", "codigo_cie10_estadistico", "nombre_cie10_estadistico"]
+            }
+        },
+        "familiares": {
+            "type": ["array","null"],
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id_parentesco": {
+                        "$ref": "definitions.json#/definitions/integerId"
+                    },
+                    "nombre_parentesco": {
+                        "$ref": "definitions.json#/definitions/stringNoBlank"
+                    },
+                    "antecedentes_enfermedades": {
+                        "type": "array",
+                        "minItems": 1,
+                        "uniqueItems": true,
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "id_patologia": {
+                                    "$ref": "definitions.json#/definitions/integerId"
+                                },
+                                "nombre_patologia": {
+                                    "$ref": "definitions.json#/definitions/stringNoBlank"
+                                },
+                                "respuesta": {
+                                    "type": ["integer", "null"],
+                                    "minimum": 1,
+                                    "maximum": 5
+                                },
+                                "hcp": {
+                                    "type":["null","boolean"]
+                                }
+                            },
+                            "required": ["id_patologia", "nombre_patologia"]
+                        }
+                    }
+                },
+                "required": ["id_parentesco", "nombre_parentesco", "antecedentes_enfermedades"]
+            }
+        },
+        "obstetricos": {
+            "type": ["object","null"],
+            "properties": {
+                "gestaciones": {
+                    "$ref": "definitions.json#/definitions/integerPositiveOptional"
+                },
+                "partos_termino": {
+                    "$ref": "definitions.json#/definitions/integerPositiveOptional" 
+                },
+                "partos_prematuros": {
+                    "$ref": "definitions.json#/definitions/integerPositiveOptional"
+                },
+                "abortos": {
+                    "$ref": "definitions.json#/definitions/integerPositiveOptional"
+                },
+                "nacidos_vivos": {
+                    "$ref": "definitions.json#/definitions/integerPositiveOptional"
+                },
+                "edad_menarquia": {
+                    "$ref": "definitions.json#/definitions/integerPositiveOptional"
+                },
+                "edad_inicio_relaciones_sexuales": {
+                    "$ref": "definitions.json#/definitions/integerPositiveOptional"
+                },
+                "id_tipo_ciclo_menstrual": {
+                    "type": ["integer","null"],
+                    "minimum": 1
+                },
+                "nombre_tipo_ciclo_menstrual": {
+                    "$ref": "definitions.json#definitions/stringOptional"
+                },
+                "anio_menarquia": {
+                    "$ref": "definitions.json#/definitions/integerIdOptional"
+                },
+                "anio_inicio_rel_sexual": {
+                    "$ref": "definitions.json#/definitions/integerPositiveOptional"
+                },
+                "menarquia_menor12": {
+                    "type": ["boolean", "null"]
+                },
+                "fur": {
+                    "$ref": "definitions.json#/definitions/dateOptional"
+                },
+                "nuligesta": {
+                    "type": ["boolean", "null"]
+                },
+                "embarazo_despues30": {
+                    "type": ["boolean", "null"]
+                },
+                "edad_menopausia": {
+                    "$ref": "definitions.json#/definitions/integerPositiveOptional"
+                },
+                "mayor_anios55": {
+                    "type": ["boolean", "null"]
+                },
+                "embarazada": {
+                    "type": ["boolean", "null"]
+                },
+                "embarazada_semanas": {
+                    "$ref": "definitions.json#/definitions/integerPositiveOptional"
+                },
+                "no_companieros_sexuales": {
+                    "$ref": "definitions.json#/definitions/integerPositiveOptional"
+                },
+                "fup": {
+                    "$ref": "definitions.json#/definitions/dateOptional"
+                },
+                "cesarea_previa": {
+                    "type": ["boolean", "null"]
+                },
+                "amenorrea": {
+                    "type": ["boolean", "null"]
+                },
+                "fecha_ultimo_evento": {
+                    "$ref": "definitions.json#/definitions/dateOptional"
+                },
+                "dismenorrea": {
+                    "type": ["boolean", "null"]
+                },
+                "embarazo_ectopico": {
+                    "$ref": "definitions.json#/definitions/integerPositiveOptional"
+                },
+                "abortos3_espontaneos": {
+                    "type": ["boolean", "null"]
+                },
+                "partos_previo_nc": {
+                    "type": ["boolean", "null"]
+                },
+                "partos_previo_normal": {
+                    "type": ["boolean", "null"]
+                },
+                "partos_previo_2500": {
+                    "type": ["boolean", "null"]
+                },
+                "partos_previo_4000": {
+                    "type": ["boolean", "null"]
+                },
+                "partos_ant_gemelares": {
+                    "type": ["boolean", "null"]
+                },
+                "vaginales": {
+                    "$ref": "definitions.json#/definitions/integerPositiveOptional"
+                },
+                "cesareas": {
+                    "$ref": "definitions.json#/definitions/integerPositiveOptional"
+                },
+                "nacidos_vivos_muertos_antes": {
+                    "$ref": "definitions.json#/definitions/integerPositiveOptional"
+                },
+                "nacidos_vivos_muertos_despues": {
+                    "$ref": "definitions.json#/definitions/integerPositiveOptional"
+                },
+                "nacidos_muertos": {
+                    "$ref": "definitions.json#/definitions/integerPositiveOptional"
+                },
+                "viven": {
+                    "$ref": "definitions.json#/definitions/integerPositiveOptional"
+                },
+                "fin_embarazo": {
+                    "$ref": "definitions.json#/definitions/dateOptional"
+                },
+                "menos_anio": {
+                    "type": ["boolean", "null"]
+                },
+                "preeclampsia": {
+                    "type": ["boolean", "null"]
+                },
+                "eclampsia": {
+                    "type": ["boolean", "null"]
+                },
+                "gravidez": {
+                    "$ref": "definitions.json#/definitions/integerPositiveOptional"
+                },
+                "partos": {
+                    "$ref": "definitions.json#/definitions/integerPositiveOptional"
+                },
+                "terminacion_previa": {
+                    "type": ["string", "null"],
+                    "minLength": 1,
+                    "maxLength": 1
+                },
+                "observacion_terminacion_previa": {
+                    "$ref": "definitions.json#definitions/stringOptional"
+                },
+                "muertos_ocho_28_dias": {
+                    "$ref": "definitions.json#/definitions/integerPositiveOptional"
+                },
+                "muertos_mas_28_dias": {
+                    "$ref": "definitions.json#/definitions/integerPositiveOptional"
+                },
+                "dos_abortos_espontaneos": {
+                    "type": ["boolean", "null"]
+                },
+                "cirugia_tracto_reproductivo": {
+                    "type": ["boolean", "null"]
+                },
+                "fistula_vaginal": {
+                    "type": ["boolean", "null"]
+                },
+                "ingreso_uci_causa_obst": {
+                    "type": ["boolean", "null"]
+                },
+                "anomalias_congenitas_emb_previo": {
+                    "type": ["boolean", "null"]
+                },
+                "otro_ant_obstetrico": {
+                    "type": ["boolean", "null"]
+                },
+                "detalle_otro_ant_obstetrico": {
+                    "$ref": "definitions.json#definitions/stringOptional"
+                },
+                "menarquia": {
+                    "type": ["boolean", "null"]
+                },
+                "telarquia": {
+                    "type": ["boolean", "null"]
+                },
+                "pubarquia": {
+                    "type": ["boolean", "null"]
+                },
+                "fecha_menarquia": {
+                    "$ref": "definitions.json#/definitions/dateOptional"
+                },
+                "fur_desconocida":{
+                    "type": ["boolean", "null"]
+                }
+            },
+            "minProperties": 60
+        },
+        "sustancias": {
+            "type": ["array","null"],
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id_sustancia": {
+                        "$ref": "definitions.json#/definitions/integerId"
+                    },
+                    "nombre_sustancia": {
+                        "$ref": "definitions.json#/definitions/stringNoBlank"
+                    },
+                    "presenta_consumo": {
+                        "type": "boolean"
+                    },
+                    "formas_consumo": {
+                        "type": ["array","null"],
+                        "minItems": 1,
+                        "uniqueItems": true,
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "id_tipo_consumo": {
+                                    "$ref": "definitions.json#/definitions/integerId"
+                                },
+                                "nombre_tipo_consumo": {
+                                    "$ref": "definitions.json#/definitions/stringNoBlank"
+                                }
+                            },
+                            "required": ["id_tipo_consumo", "nombre_tipo_consumo"]
+                        }
+                    },
+                    "detalle_consumo": {
+                        "type": ["object", "null"],
+                        "properties": {
+                            "anio_inicio_consumo": {
+                                "type": ["integer", "null"],
+                                "minimum": 1919
+                            },
+                            "anios_consumio": {
+                                "type": ["integer","null"],
+                                "minimum": 1,
+                                "maximum": 100
+                            },
+                            "observacion": {
+                                "$ref": "definitions.json#/definitions/stringOptional"
+                            },
+                            "dosis": {
+                                "type": ["object","null"],
+                                "properties": {
+                                    "consumo_diario": {
+                                        "type": "integer",
+                                        "minimum": 0
+                                    },
+                                    "frecuencia_semanal": {
+                                        "type": "integer",
+                                        "minimum": 0,
+                                        "maximum": 7
+                                    }
+                                },
+                                "required": ["consumo_diario", "frecuencia_semanal"]
+                            }
+                        },
+                        "required": ["anio_inicio_consumo", "anios_consumio", "observacion", "dosis"]
+                    }
+                },
+                "required": ["id_sustancia", "nombre_sustancia", "presenta_consumo", "formas_consumo", "detalle_consumo"]
+            }
+        },
+        "otros": {
+            "type": ["array", "null"],
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id_otro_antecedente": {
+                        "$ref": "definitions.json#/definitions/integerId"
+                    },
+                    "nombre_otro_antecedente": {
+                        "$ref": "definitions.json#/definitions/stringNoBlank"
+                    },
+                    "presencia": {
+                        "type": "boolean"
+                    },
+                    "observacion": {
+                        "type" : ["string","null"]
+                    },
+                    "respuesta": {
+                        "type": ["integer", "null"],
+                        "minimum": 1,
+                        "maximum": 5
+                    },
+                    "hcp": {
+                        "type":["null","boolean"]
+                    }
+                },
+                "required": ["id_otro_antecedente", "nombre_otro_antecedente", "presencia", "observacion"]
+            }
+        }
+    }
+}
