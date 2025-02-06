@@ -1,0 +1,8 @@
+
+
+Tener instalado:
+----------------------------------------------
+
+
+1- Cliente rest (podría ser postaman)
+2- Docker
