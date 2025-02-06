@@ -1,0 +1,224 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "id": "../src/JsonSchema/schemas/persona_base.json",
+    "title": "Persona base",
+    "type" : "object",
+    "properties": {
+        "primer_nombre": {
+            "$ref": "definitions.json#/definitions/nameOptional"
+        },
+        "segundo_nombre": {
+            "$ref": "definitions.json#/definitions/nameOptional"
+        },
+        "tercer_nombre": {
+            "$ref": "definitions.json#/definitions/nameOptional"
+        },
+        "primer_apellido": {
+            "$ref": "definitions.json#/definitions/lastNameOptional"
+        },
+        "segundo_apellido": {
+            "$ref": "definitions.json#/definitions/lastNameOptional"
+        },
+        "apellido_casada": {
+            "$ref": "definitions.json#/definitions/lastNameOptional"
+        },
+        "conocido_por": {
+            "type": ["string", "null"],
+            "maxLength": 150
+        },
+        "id_sexo": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4
+        },
+        "codigo_sexo": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1
+        },
+        "nombre_sexo": {
+            "$ref": "definitions.json#/definitions/stringNoBlank"
+        },
+        "id_estado_civil": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 6
+        },
+        "nombre_estado_civil": {
+            "$ref": "definitions.json#/definitions/stringNoBlank"
+        },
+        "estado_vital": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2
+        },
+        "fecha_fallecimiento": {
+            "$ref": "definitions.json#/definitions/dateOptional"
+        },
+        "id_nacionalidad": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 249
+        },
+        "codigo_nacionalidad": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2
+        },
+        "nombre_nacionalidad": {
+            "$ref": "definitions.json#/definitions/stringNoBlank"
+        },
+        "discapacidades": {
+            "type": ["array", "null"],
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+                "properties": {
+                    "discapacidad": {
+                        "$ref": "definitions.json#/definitions/stringNoBlank"
+                    },
+                    "porcentaje": {
+                        "type": "integer",
+                        "minimum": 1
+                    }
+                },
+                "additionalProperties": false,
+                "required": [ "discapacidad", "porcentaje" ]
+            }
+        },
+        "datos_nacimiento": {
+            "type": "object",
+            "properties": {
+                "id_pais": {
+                    "$ref": "definitions.json#/definitions/idPaisRequired"
+                },
+                "nombre_pais": {
+                    "$ref": "definitions.json#/definitions/stringNoBlank"
+                },
+                "id_departamento": {
+                    "$ref": "definitions.json#/definitions/idDepartamentoOptional"
+                },
+                "nombre_departamento": {
+                    "$ref": "definitions.json#/definitions/stringOptional"
+                },
+                "id_municipio": {
+                    "$ref": "definitions.json#/definitions/idMunicipioOptional"
+                },
+                "nombre_municipio": {
+                    "$ref": "definitions.json#/definitions/stringOptional"
+                },
+                "fecha_hora_nacimiento": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            },
+            "additionalProperties": false,
+            "required": ["id_pais", "nombre_pais", "id_departamento", "nombre_departamento", "id_municipio", "nombre_municipio", "fecha_hora_nacimiento"]
+        },
+        "documentos": {
+            "anyOf": [
+                { "required": ["dui"] },
+                { "required": ["pasaporte"] },
+                { "required": ["nit"] },
+                { "required": ["cun"] }
+            ],
+            "properties": {
+                "dui": {
+                    "$ref": "definitions.json#/definitions/duiRequired"
+                },
+                "pasaporte": {
+                    "$ref": "definitions.json#/definitions/stringNoBlank"
+                },
+                "nit": {
+                    "$ref": "definitions.json#/definitions/nitRequired"
+                },
+                "cun": {
+                    "$ref": "definitions.json#/definitions/cunRequired"
+                }
+            }
+        },
+        "familiares": {
+            "type": ["object", "null"],
+            "properties": {
+                "madre": {
+                    "type": ["object", "null"],
+                    "properties": {
+                        "nombres": {
+                            "type": "string",
+                            "minLength": 3,
+                            "maxLength": 75
+                        },
+                        "apellidos": {
+                            "type": "string",
+                            "minLength": 3,
+                            "maxLength": 90
+                        }
+                    },
+                    "additionalProperties": false,
+                    "required": ["nombres", "apellidos"]
+                },
+                "padre": {
+                    "type": ["object", "null"],
+                    "properties": {
+                        "nombres": {
+                            "type": "string",
+                            "minLength": 3,
+                            "maxLength": 75
+                        },
+                        "apellidos": {
+                            "type": "string",
+                            "minLength": 3,
+                            "maxLength": 90
+                        }
+                    },
+                    "additionalProperties": false,
+                    "required": ["nombres", "apellidos"]
+                }
+            },
+            "additionalProperties": false,
+            "required": ["madre", "padre"]
+        },
+        "direccion": {
+            "anyOf": [
+                { "type": "null" },
+                { "$ref": "definitions.json#/definitions/direccion" }
+            ],
+            "properties": {
+                "id_pais": {},
+                "id_departamento": {},
+                "id_municipio": {},
+                "id_canton": {},
+                "direccion": {},
+                "id_area_geografica": {}
+            },
+            "additionalProperties": false,
+            "required": [ "id_pais", "id_departamento", "id_municipio", "id_canton", "direccion", "id_area_geografica" ]
+        },
+        "responsable": {
+            "anyOf": [
+                { "type": "null" },
+                { "$ref": "definitions.json#/definitions/responsable" }
+            ],
+            "properties": {
+                "primer_nombre": {},
+                "segundo_nombre": {},
+                "tercer_nombre": {},
+                "primer_apellido": {},
+                "segundo_apellido": {},
+                "apellido_casada": {},
+                "dui": {},
+                "id_parentesco": {},
+                "direccion": {},
+                "telefonos": {}
+            },
+            "additionalProperties": false,
+            "required": ["primer_nombre", "segundo_nombre", "tercer_nombre", "primer_apellido", "segundo_apellido", "apellido_casada", "dui", "id_parentesco", "direccion", "telefonos" ]
+        },
+        "telefono": {
+            "anyOf": [
+                { "type": "null" },
+                { "$ref": "definitions.json#/definitions/telefono" }
+            ]
+        }
+    }
+}
