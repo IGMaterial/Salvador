@@ -2,3 +2,8 @@
 
 
 --https://lacpass-dev.salud.gob.sv/
+
+
+Ejemplo GET DocumentReference:
+
+{{fhir_server}}/fhir/DocumentReference/?patient.identifier=CL/F12-189226527&_format=json&status=current
